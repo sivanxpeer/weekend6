@@ -8,13 +8,15 @@ body {
   height: 100vh;
 }
 
+/* -------------------------------------------------game board section --------------------------------------------------------------*/
+
 .game-container {
-  background-color: #fff;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  height: 100%;
-  width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 100%;
+    width: 100%;
 }
 
 .game-board {
@@ -25,60 +27,6 @@ body {
   display: grid;
   margin: auto;
   background-color: rgb(92, 194, 235);
-}
-
-.tool-box-container {
-  display: flex;
-  height: 100%;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.tools-images-container {
-  width: 18vmin;
-  height: 100%;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.tool {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid white;
-  align-self: center;
-  margin: 0 auto;
-}
-.tool-image {
-  width: 10vmin;
-  height: 12vmin;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-}
-
-.tool-name {
-  display: flex;
-  color: #fff;
-}
-.axe {
-  background: url("/assets/images/axe.png") no-repeat center center / cover;
-  border: black 5px solid;
-}
-.shovel {
-  background: url("/assets/images/shovel.png") no-repeat center center/ cover;
-  border: black 5px solid;
-}
-.pickaxe {
-  background: url("/assets/images/pickaxe.png") no-repeat center center/ cover;
-  border: black 5px solid;
-  margin-top: 50px;
 }
 
 div {
@@ -111,4 +59,68 @@ div {
 
 .sky {
   background-color: rgb(92, 194, 235);
+}
+
+
+
+/* -------------------------------------------------tool box section --------------------------------------------------------------*/
+.tool-box-container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.tools-images-container {
+  width: 18vmin;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  align-self: center;
+  margin: 5px auto;
+}
+
+.tool-image {
+  width: 10vmin;
+  height:10vmin;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.tool-name {
+  display: flex;
+  font-size: 11px;
+  color: #fff;
+  margin: auto;
+}
+
+.axe {
+  background: url("/assets/images/axe.png") no-repeat center center / cover;
+  border: black 5px solid;
+}
+.shovel {
+  background: url("/assets/images/shovel.png") no-repeat center center/ cover;
+
+  border: black 5px solid;
+}
+.pickaxe {
+  background: url("/assets/images/pickaxe.png") no-repeat center center/ cover;
+
+  border: black 5px solid;
+  /* margin-top: 50px; */
 }
