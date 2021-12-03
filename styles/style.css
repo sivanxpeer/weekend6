@@ -21,41 +21,61 @@ body {
   margin-left: 50px;
   background-color: rgb(204, 204, 204);
   width: 30vmin;
-  height: 40vmin;
+  height: 60vmin;
   display: flex;
   flex-direction: column;
 }
 
-.toolPhotoUL {
+.tools-images-container {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.toolphoto {
+.tool-image {
   width: 60px;
   height: 60px;
+}
+
+.tool-name{
+    display: flex;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+.axe{
+    /* margin: auto; */
+    margin-left: 12px;
 }
 
 div{
     border: 1px solid red; 
 }
 .tree{
-    background:url("/assets/images/css_sprites.png")-110px -110px;
+background: url("/assets/images/Wood.png")no-repeat center center/cover;
+    /* background:url("/assets/images/css_sprites.png")-110px -110px; */
+
 }
 
 .leaves{
-    background:url("/assets/images/css_sprites.png")-210px -10px;
+background: url("/assets/images/Leaves.png")no-repeat center center/cover;
+    /* background:url("/assets/images/css_sprites.png")-210px -10px; */
 }
 
 .rock{
-    background:url("/assets/images/css_sprites.png")-10px -110px;
+    background: url("/assets/images/Stone.jpg")no-repeat center center/cover;
+    /* background:url("/assets/images/css_sprites.png")-10px -110px; */
 }
 
 .ground{
-    background: url("/assets/images/css_sprites.png")-110px -10px;
+    background: url("/assets/images/Dirt.png")no-repeat center center/cover;
+    /* background: url("/assets/images/css_sprites.png")-110px -10px; */
 }
 
 .grass{
-    background: url("/assets/images/css_sprites.png")-10px -10px;
+    /* background: url("/assets/images/css_sprites.png")-10px -10px; */
+    background: url("/assets/images/GrassBlock.png")no-repeat center center/cover;
 }
 
 .cloud{

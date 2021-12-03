@@ -16,7 +16,7 @@ const gameBoardMatrix = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
     [0, 0, 2, 2, 0, 0, 3, 3, 3, 0, 0, 0, 0, 1, 0, 0, 0, 0],
     [0, 0, 2, 2, 0, 0, 3, 3, 3, 0, 0, 0, 0, 1, 0, 0, 0, 0],
-    [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+    [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
     [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
     [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
     [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
@@ -59,7 +59,16 @@ gameBoardMatrix.forEach((row, yIndex) => {
             case 6:
                 block.classList.add(materialObj.cloud.className);
                 break;
+            case 7:
+                block.classList.add(materialObj.grassBlock.className);
+                break;
+
         }
         gameBoard.appendChild(block);
     });
 });
+
+
+gameBoard.addEventListener("click",(e)=>{
+    console.dir(e.path[0].classList);
+})
