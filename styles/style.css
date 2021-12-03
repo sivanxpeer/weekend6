@@ -1,100 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
+}
+
+.game-container {
+  background-color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  background-color: black;
+  justify-content: space-between;
+  margin: auto;
+  height: 100%;
+  width: 100%;
 }
 
-.game-board-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    background-color: #fff;
-}
-
-#game-board {
-  /* background-color: rgb(21, 147, 215); */
-  background-color: rgb(204, 204, 204);
-  width: 100vmin;
-  height: 100vmin;
-  display: grid;
-  margin-left:45px;
-
+.game-board {
   grid-template-columns: repeat(21, 1fr);
   grid-template-rows: repeat(21, 1fr);
+  height: 100%;
+  width: 100vmin;
+  display: grid;
+  margin: auto;
+  background-color: rgb(92, 194, 235);
 }
 
-#tool-box {
-    background-color: black;
-  margin-left: 50px;
-  width: 30vmin;
-  height: 100vmin;
+.tool-box-container {
   display: flex;
-  flex-direction: column;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .tools-images-container {
-    width: 10vmin;
-    height: 10vmin;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top:120px;
+  width: 18vmin;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
+.tool {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  align-self: center;
+  margin: 0 auto;
+}
 .tool-image {
-    width: 10vmin;
-    height: 10vmin;
-    background-color: black;
-  /* width: 60px; */
-  /* height: 60px; */
+  width: 10vmin;
+  height: 12vmin;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
 
-.tool-name{
-    display: flex;
-    color: #fff;
-    /* align-items: center; */
-    /* text-align: center; */
+.tool-name {
+  display: flex;
+  color: #fff;
+}
+.axe {
+  background: url("/assets/images/axe.png") no-repeat center center / cover;
+  border: black 5px solid;
+}
+.shovel {
+  background: url("/assets/images/shovel.png") no-repeat center center/ cover;
+  border: black 5px solid;
+}
+.pickaxe {
+  background: url("/assets/images/pickaxe.png") no-repeat center center/ cover;
+  border: black 5px solid;
+  margin-top: 50px;
 }
 
-.axe{
-    /* margin: auto; */
-    margin-left: 12px;
+div {
+  border: 1px solid red;
 }
 
-div{
-    border: 1px solid red; 
-}
-.tree{
-background: url("/assets/images/Wood.png")no-repeat center center/cover;
-    /* background:url("/assets/images/css_sprites.png")-110px -110px; */
-
+.tree {
+  background: url("/assets/images/Wood.png") no-repeat center center/cover;
 }
 
-.leaves{
-background: url("/assets/images/Leaves.png")no-repeat center center/cover;
-    /* background:url("/assets/images/css_sprites.png")-210px -10px; */
+.leaves {
+  background: url("/assets/images/Leaves.png") no-repeat center center/cover;
 }
 
-.rock{
-    background: url("/assets/images/Stone.jpg")no-repeat center center/cover;
-    /* background:url("/assets/images/css_sprites.png")-10px -110px; */
+.rock {
+  background: url("/assets/images/Stone.jpg") no-repeat center center/cover;
 }
 
-.ground{
-    background: url("/assets/images/Dirt.png")no-repeat center center/cover;
-    /* background: url("/assets/images/css_sprites.png")-110px -10px; */
+.ground {
+  background: url("/assets/images/Dirt.png") no-repeat center center/cover;
 }
 
-.grass{
-    /* background: url("/assets/images/css_sprites.png")-10px -10px; */
-    background: url("/assets/images/GrassBlock.png")no-repeat center center/cover;
+.grass {
+  background: url("/assets/images/GrassBlock.png") no-repeat center center/cover;
 }
 
-.cloud{
-    background: rgb(255, 255, 255);
+.cloud {
+  background: rgb(255, 255, 255);
+}
+
+.sky {
+  background-color: rgb(92, 194, 235);
 }
