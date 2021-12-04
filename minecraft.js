@@ -35,14 +35,9 @@ const materialObj = {
     cloud: { className: "cloud", id: 6 },
 };
 
-
-const tools = document.querySelectorAll(".tool-image")
-// console.log(tools)
-// tools.forEach((tool) => tool.classList.contains(tool.className), addEventListener("click", (e) => { console.log(e.target) }, false));
-// console.log(tools);
+// const tools = document.querySelectorAll(".tool-image")
 
 const pickaxeButton = document.querySelector(".pickaxe");
-// console.log(pickaxeButton.classList.add(toolsPowersObj.pickaxe.className));
 const shovelButton = document.querySelector(".shovel");
 const axeButton = document.querySelector(".axe");
 
@@ -50,18 +45,20 @@ pickaxeButton.addEventListener("click", () => {
     console.log("pickaxe clicked");
 })
 
+shovelButton.addEventListener("click",()=>{
+    console.log("shovel clicked");
+})
+
+axeButton.addEventListener("click",()=>{
+    console.log("axe clicked");
+})
 
 
-
-// runs on each row
+//creating game-board
 gameBoardMatrix.forEach((row, yIndex) => {
-    // runs on each column
     row.forEach((column, xIndex) => {
-        // save current position id
         const currentPositionId = gameBoardMatrix[yIndex][xIndex];
-        // create a block
         const block = document.createElement("div");
-        // add style by id
         switch (currentPositionId) {
             case 0:
                 block.classList.add(materialObj.sky.className);
@@ -97,27 +94,30 @@ gameBoardMatrix.forEach((row, yIndex) => {
 // b. Pickaxe - for mining rocks
 // c. Shovel - for digging dirt
 
-const toolsPowersObj = {
-    pickaxe: { className: "stone"},
-      shovel: {className: ["dirt", "grass"]},
-      axe: {className: ["wood", "leaves"]},
-  };
+const toolsObj = {
+    pickaxe: { className: "rock" },
+    shovel: { className: ["ground", "grass","leaves"] },
+    axe: { className: ["tree", "leaves"] },
+};
 
-
-  pickaxeButton.classList.add(toolsPowersObj.pickaxe.className);
-
-    gameBoard.addEventListener("click", (e) => {
-    const currentTool ="pickaxe";
-
-    const currentBoardMaterial = e.path[0].classList[0];
-    console.dir(currentBoardMaterial.target.className);
-
-    switch (currentTool) {
-        case "pickaxeButton":
-            if(currentBoardMaterial.contains("rock")){
-                console.log("ok to remove rock")
-                console.log(currentBoardMaterial.target)
+const currentTool = "";
+gameBoard.addEventListener("click", (e) => {
+    switch(currentTool){
+        // console.dir(e.target.className);
+        // console.log(toolsObj.pickaxe.className);
+        case "pickaxe":
+            if(toolsObj.pickaxe.className.includes(e.target.className)){
+                console.log("siv");
             }
+            break;
+        case "shovel":
+            if(toolsObj.shovel.className.contains(e.target.className)){
+                console.log("HILA <3");
+            }
+            break;
+        // if(tools.toolsObj.axe.includes(e.target.classList)){
+        //     console.log("axe");
+        // }
     }
 })
 
