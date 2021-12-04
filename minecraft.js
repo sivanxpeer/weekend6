@@ -35,12 +35,10 @@ const materialObj = {
     cloud: { className: "cloud", id: 6 },
 };
 
-
 const toolsPowersObj = {
     pickaxe: ["stone"],
     shovel: ["dirt", "grass"],
     axe: ["wood", "leaves"],
-    none: [],
 };
 
 const tools = document.querySelectorAll(".tool-image")
@@ -48,28 +46,29 @@ const tools = document.querySelectorAll(".tool-image")
 tools.forEach((tool) => tool.classList.contains(tool.className), addEventListener("click", (e) => { console.log(e.target) }, false));
 // console.log(tools);
 
-let toolsInventory = "";
-gameBoard.addEventListener("click", (e) => {
-    switch (toolsInventory) {
-        case "pickaxe":
-            if (pickaxeButton2.className.includes(e.target.className)) {
-                e.target.classList = 'sky';
-            } else {
-                shovelButton1.style.background = 'red';
-            }
-    }
+const pickaxeButton = document.querySelector(".pickaxe");
+const shovelButton = document.querySelector(".shovel");
+const axeButton = document.querySelector(".axe");
+
+// let toolsInventory = "";
+// gameBoard.addEventListener("click", (e) => {
+//     switch (toolsInventory) {
+//         case "pickaxe":
+//             if (pickaxeButton.className.includes(e.target.className)) {
+//                 e.target.classList = 'sky';
+//             } else {
+//                 shovelButton.style.background = 'red';
+//             }
+//     }
+// })
+
+
+pickaxeButton.addEventListener("click", () => {
+    console.log("pickaxe clicked");
 })
 
-// const pickaxeButton= document.querySelector(".pickaxe");
-// console.log(pickaxeButton);
-// const shovelButton= document.querySelector(".shovel");
-// console.log(shovelButton);
-// const axeButton= document.querySelector(".axe");
-// console.log(axeButton);
 
-// pickaxeButton.addEventListener("click",()=>{
-//     console.log()
-// })
+
 
 // runs on each row
 gameBoardMatrix.forEach((row, yIndex) => {
@@ -106,7 +105,6 @@ gameBoardMatrix.forEach((row, yIndex) => {
                 block.classList.add(materialObj.grassBlock.className);
                 break;
         }
-
         gameBoard.appendChild(block);
     });
 });
@@ -116,18 +114,21 @@ gameBoardMatrix.forEach((row, yIndex) => {
 // b. Pickaxe - for mining rocks
 // c. Shovel - for digging dirt
 
-// gameBoard.addEventListener("click", (e) => {
-//     const currentBoardMaterial = e.path[0].classList[0];
-//     console.dir(currentBoardMaterial);
-//     // switch(currentBoardMaterial){
-//     //     case 0:
-//     //     case 1:
-//     //     case 2:
-//     //     case 3:
-//     //     case 4:
-//     //     case 5:
+gameBoard.addEventListener("click", (e) => {
+    const currentTool ="pickaxeButton";
 
-//     // }    
-// })
+    const currentBoardMaterial = e.path[0].classList[0];
+    console.dir(currentBoardMaterial);
+
+    switch (currentTool) {
+        case "pickaxeButton":
+            if(currentBoardMaterial ==="rock"){
+                console.log("ok to remove rock")
+                currentBoardMaterial.className="sky";
+                currentBoardMaterial.classList = "sky";
+
+            }
+    }
+})
 
 

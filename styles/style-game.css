@@ -28,9 +28,13 @@ body {
   margin: auto;
   background-color: rgb(92, 194, 235);
 }
+div{
+   border: 1px solid red;
+}
 
-div {
-  border: 1px solid red;
+.grid-board div {
+  width: 5vmin;
+  height: 5vmin;
 }
 
 .tree {
@@ -124,4 +128,12 @@ div {
 
   border: black 5px solid;
   /* margin-top: 50px; */
+}
+
+
+
+/* ------------------------------------------------- Media Queries --------------------------------------------------------------*/
+ 
+@media(max-width:380px){ 
+
 }
