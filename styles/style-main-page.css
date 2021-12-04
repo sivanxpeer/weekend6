@@ -46,12 +46,17 @@ body {
 .start {
   width: 110px;
   margin: 0 auto;
-  padding: 2px 13px;
+  padding: 3px 13px;
   font-weight: 900;
   font-size: 18px;
   border: 0.5px solid black;
   font-family: "Minecraft", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* text-align: ; */
 }
+
 
 .start a {
   color: black;
@@ -80,20 +85,20 @@ body {
     align-content: center;
     align-items: center;
     margin-top: 130px;
-  }
-  
-  .tool {
+}
+
+.tool {
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
     align-self: center;
     justify-content: space-around;
-    /* margin: 5px auto; */
-  }
-  
-  .tool-image {
+}
+
+.tool-image {
+    margin: 5px auto;
+      border: 1px solid white;
       width: 10vmin;
-      height:10vmin;
+      height:12vmin;
       background-color: black;
       display: flex;
       flex-direction: column;

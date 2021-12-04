@@ -106,6 +106,7 @@ div{
   width: 10vmin;
   height:10vmin;
   background-color: black;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,3 +136,10 @@ div{
 /* .tool:active{
   background-color: blue;
 } */
+
+
+button{
+  border: none;
+  padding: 2%;
+  background-color: black;
+}

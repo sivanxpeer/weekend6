@@ -37,9 +37,9 @@ const materialObj = {
 
 // const tools = document.querySelectorAll(".tool-image")
 
-const pickaxeButton = document.querySelector(".pickaxe");
-const shovelButton = document.querySelector(".shovel");
-const axeButton = document.querySelector(".axe");
+const pickaxeButton = document.querySelector(".button1");
+const shovelButton = document.querySelector(".button2");
+const axeButton = document.querySelector(".button3");
 
 
 //creating game-board
@@ -92,18 +92,26 @@ let currentTool = "";
 pickaxeButton.addEventListener("click", () => {
     console.log("pickaxe clicked");
     currentTool = "pickaxe";
+    console.dir(pickaxeButton);
     pickaxeButton.style.background='blue';
+    axeButton.style.background="";
+    shovelButton.style.background="";
 })
 
 shovelButton.addEventListener("click", () => {
     console.log("shovel clicked");
     currentTool = "shovel";
-
+    shovelButton.style.background='blue';
+    axeButton.style.background="";
+    pickaxeButton.style.background="";
 })
 
 axeButton.addEventListener("click", () => {
     console.log("axe clicked");
     currentTool = "axe";
+    shovelButton.style.background='';
+    axeButton.style.background="blue";
+    pickaxeButton.style.background="";
 
 })
 
@@ -117,15 +125,26 @@ gameBoard.addEventListener("click", (e) => {
             if (toolsObj.pickaxe.className.includes(e.target.className)) {
                 e.target.classList ="sky";
             }
+            else{
+                pickaxeButton.style.background='red';
+            }
             break;
         case "shovel":
             if (toolsObj.shovel.className.includes(e.target.className)) {
-                console.log("HILA <3");
+                e.target.classList="sky";
+            }
+            else{
+                shovelButton.style.background='red';
             }
             break;
-        // if(tools.toolsObj.axe.includes(e.target.classList)){
-        //     console.log("axe");
-        // }
+        case "axe":
+            if (toolsObj.shovel.className.includes(e.target.className)) {
+                e.target.classList="sky";
+            }
+            else{
+                axeButton.style.background='red';
+            }   
+            break;
     }
 })
 
