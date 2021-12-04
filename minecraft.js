@@ -36,7 +36,7 @@ const materialObj = {
 };
 
 
-const toolsPowers = {
+const toolsPowersObj = {
     pickaxe: ["stone"],
     shovel: ["dirt", "grass"],
     axe: ["wood", "leaves"],
@@ -45,9 +45,20 @@ const toolsPowers = {
 
 const tools = document.querySelectorAll(".tool-image")
 // console.log(tools)
-tools.forEach((tool)=>console.log(tool),addEventListener("click",(e)=>{console.log(e.target)},false));
+tools.forEach((tool) => tool.classList.contains(tool.className), addEventListener("click", (e) => { console.log(e.target) }, false));
 // console.log(tools);
-        
+
+let toolsInventory = "";
+gameBoard.addEventListener("click", (e) => {
+    switch (toolsInventory) {
+        case "pickaxe":
+            if (pickaxeButton2.className.includes(e.target.className)) {
+                e.target.classList = 'sky';
+            } else {
+                shovelButton1.style.background = 'red';
+            }
+    }
+})
 
 // const pickaxeButton= document.querySelector(".pickaxe");
 // console.log(pickaxeButton);
@@ -95,7 +106,7 @@ gameBoardMatrix.forEach((row, yIndex) => {
                 block.classList.add(materialObj.grassBlock.className);
                 break;
         }
-        
+
         gameBoard.appendChild(block);
     });
 });
@@ -105,18 +116,18 @@ gameBoardMatrix.forEach((row, yIndex) => {
 // b. Pickaxe - for mining rocks
 // c. Shovel - for digging dirt
 
-gameBoard.addEventListener("click", (e) => {
-    const currentBoardMaterial = e.path[0].classList[0];
-    console.dir(currentBoardMaterial);
-    // switch(currentBoardMaterial){
-    //     case 0:
-    //     case 1:
-    //     case 2:
-    //     case 3:
-    //     case 4:
-    //     case 5:
+// gameBoard.addEventListener("click", (e) => {
+//     const currentBoardMaterial = e.path[0].classList[0];
+//     console.dir(currentBoardMaterial);
+//     // switch(currentBoardMaterial){
+//     //     case 0:
+//     //     case 1:
+//     //     case 2:
+//     //     case 3:
+//     //     case 4:
+//     //     case 5:
 
-    // }    
-})
+//     // }    
+// })
 
 
