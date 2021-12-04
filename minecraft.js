@@ -26,7 +26,7 @@ const gameBoardMatrix = [
 ];
 
 const materialObj = {
-    sky:{className: "sky", id:0},
+    sky: { className: "sky", id: 0 },
     tree: { className: "tree", id: 1 },
     leaves: { className: "leaves", id: 2 },
     rock: { className: "rock", id: 3 },
@@ -34,6 +34,31 @@ const materialObj = {
     grass: { className: "grass", id: 5 },
     cloud: { className: "cloud", id: 6 },
 };
+
+
+const toolsPowers = {
+    pickaxe: ["stone"],
+    shovel: ["dirt", "grass"],
+    axe: ["wood", "leaves"],
+    none: [],
+};
+
+const tools = document.querySelectorAll(".tool-image")
+// console.log(tools)
+tools.forEach((tool)=>console.log(tool),addEventListener("click",(e)=>{console.log(e.target)},false));
+// console.log(tools);
+        
+
+// const pickaxeButton= document.querySelector(".pickaxe");
+// console.log(pickaxeButton);
+// const shovelButton= document.querySelector(".shovel");
+// console.log(shovelButton);
+// const axeButton= document.querySelector(".axe");
+// console.log(axeButton);
+
+// pickaxeButton.addEventListener("click",()=>{
+//     console.log()
+// })
 
 // runs on each row
 gameBoardMatrix.forEach((row, yIndex) => {
@@ -70,11 +95,28 @@ gameBoardMatrix.forEach((row, yIndex) => {
                 block.classList.add(materialObj.grassBlock.className);
                 break;
         }
+        
         gameBoard.appendChild(block);
     });
 });
 
 
+// a. Axe - for cutting trees
+// b. Pickaxe - for mining rocks
+// c. Shovel - for digging dirt
+
 gameBoard.addEventListener("click", (e) => {
-    console.dir(e.path[0].classList);
+    const currentBoardMaterial = e.path[0].classList[0];
+    console.dir(currentBoardMaterial);
+    // switch(currentBoardMaterial){
+    //     case 0:
+    //     case 1:
+    //     case 2:
+    //     case 3:
+    //     case 4:
+    //     case 5:
+
+    // }    
 })
+
+
