@@ -41,18 +41,6 @@ const pickaxeButton = document.querySelector(".pickaxe");
 const shovelButton = document.querySelector(".shovel");
 const axeButton = document.querySelector(".axe");
 
-pickaxeButton.addEventListener("click", () => {
-    console.log("pickaxe clicked");
-})
-
-shovelButton.addEventListener("click",()=>{
-    console.log("shovel clicked");
-})
-
-axeButton.addEventListener("click",()=>{
-    console.log("axe clicked");
-})
-
 
 //creating game-board
 gameBoardMatrix.forEach((row, yIndex) => {
@@ -96,22 +84,42 @@ gameBoardMatrix.forEach((row, yIndex) => {
 
 const toolsObj = {
     pickaxe: { className: "rock" },
-    shovel: { className: ["ground", "grass","leaves"] },
+    shovel: { className: ["ground", "grass", "leaves"] },
     axe: { className: ["tree", "leaves"] },
 };
 
-const currentTool = "";
+let currentTool = "";
+pickaxeButton.addEventListener("click", () => {
+    console.log("pickaxe clicked");
+    currentTool = "pickaxe";
+    pickaxeButton.style.background='blue';
+})
+
+shovelButton.addEventListener("click", () => {
+    console.log("shovel clicked");
+    currentTool = "shovel";
+
+})
+
+axeButton.addEventListener("click", () => {
+    console.log("axe clicked");
+    currentTool = "axe";
+
+})
+
 gameBoard.addEventListener("click", (e) => {
-    switch(currentTool){
+    // console.log(toolsObj.pickaxe.className)
+    // console.log(e.target.className)
+    switch (currentTool) {
         // console.dir(e.target.className);
         // console.log(toolsObj.pickaxe.className);
         case "pickaxe":
-            if(toolsObj.pickaxe.className.includes(e.target.className)){
-                console.log("siv");
+            if (toolsObj.pickaxe.className.includes(e.target.className)) {
+                e.target.classList ="sky";
             }
             break;
         case "shovel":
-            if(toolsObj.shovel.className.contains(e.target.className)){
+            if (toolsObj.shovel.className.includes(e.target.className)) {
                 console.log("HILA <3");
             }
             break;

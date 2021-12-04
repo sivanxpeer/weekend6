@@ -4,6 +4,9 @@
   padding: 0;
 }
 
+@import url("http://fonts.cdnfonts.com/css/minecraft-4");
+
+
 body {
   height: 100vh;
 }
@@ -76,6 +79,8 @@ div{
   justify-content: center;
   align-items: center;
   background: black;
+  font-family: "Minecraft", sans-serif;
+
 }
 
 .tools-images-container {
@@ -120,20 +125,13 @@ div{
 }
 .shovel {
   background: url("/assets/images/shovel.png") no-repeat center center/ cover;
-
   border: black 5px solid;
 }
 .pickaxe {
   background: url("/assets/images/pickaxe.png") no-repeat center center/ cover;
-
   border: black 5px solid;
-  /* margin-top: 50px; */
 }
 
-
-
-/* ------------------------------------------------- Media Queries --------------------------------------------------------------*/
- 
-@media(max-width:380px){ 
-
-}
+/* .tool:active{
+  background-color: blue;
+} */
