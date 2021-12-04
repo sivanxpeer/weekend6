@@ -35,33 +35,16 @@ const materialObj = {
     cloud: { className: "cloud", id: 6 },
 };
 
-const toolsPowersObj = {
-    pickaxe: ["stone"],
-    shovel: ["dirt", "grass"],
-    axe: ["wood", "leaves"],
-};
 
 const tools = document.querySelectorAll(".tool-image")
 // console.log(tools)
-tools.forEach((tool) => tool.classList.contains(tool.className), addEventListener("click", (e) => { console.log(e.target) }, false));
+// tools.forEach((tool) => tool.classList.contains(tool.className), addEventListener("click", (e) => { console.log(e.target) }, false));
 // console.log(tools);
 
 const pickaxeButton = document.querySelector(".pickaxe");
+// console.log(pickaxeButton.classList.add(toolsPowersObj.pickaxe.className));
 const shovelButton = document.querySelector(".shovel");
 const axeButton = document.querySelector(".axe");
-
-// let toolsInventory = "";
-// gameBoard.addEventListener("click", (e) => {
-//     switch (toolsInventory) {
-//         case "pickaxe":
-//             if (pickaxeButton.className.includes(e.target.className)) {
-//                 e.target.classList = 'sky';
-//             } else {
-//                 shovelButton.style.background = 'red';
-//             }
-//     }
-// })
-
 
 pickaxeButton.addEventListener("click", () => {
     console.log("pickaxe clicked");
@@ -114,19 +97,26 @@ gameBoardMatrix.forEach((row, yIndex) => {
 // b. Pickaxe - for mining rocks
 // c. Shovel - for digging dirt
 
-gameBoard.addEventListener("click", (e) => {
-    const currentTool ="pickaxeButton";
+const toolsPowersObj = {
+    pickaxe: { className: "stone"},
+      shovel: {className: ["dirt", "grass"]},
+      axe: {className: ["wood", "leaves"]},
+  };
+
+
+  pickaxeButton.classList.add(toolsPowersObj.pickaxe.className);
+
+    gameBoard.addEventListener("click", (e) => {
+    const currentTool ="pickaxe";
 
     const currentBoardMaterial = e.path[0].classList[0];
-    console.dir(currentBoardMaterial);
+    console.dir(currentBoardMaterial.target.className);
 
     switch (currentTool) {
         case "pickaxeButton":
-            if(currentBoardMaterial ==="rock"){
+            if(currentBoardMaterial.contains("rock")){
                 console.log("ok to remove rock")
-                currentBoardMaterial.className="sky";
-                currentBoardMaterial.classList = "sky";
-
+                console.log(currentBoardMaterial.target)
             }
     }
 })
