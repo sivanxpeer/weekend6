@@ -1,34 +1,114 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    height: 100vh;
+body {
+  height: 100vh;
 }
 
-.page-container{
-    background: url("/assets/images/wood.png");
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.minecraft{
-    width: 20rem;
-    height: 10rem;
-    display: flex;
-    justify-content: center;
+.minecraft-main {
+  width: 100%;
+  height: 100%;
+  background: url("/assets/images/wood.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.minecraft-logo{
-    background: url("/assets/images/minecraft-logo.png")no-repeat center center/cover;
-    width: 100%;
-    height: 100%;
-    /* z-index: 2; */
-    /* align-self: center; */
+.minecraft {
+  width: 20rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.minecraft-logo {
+  background: url("/assets/images/minecraft-logo.png") no-repeat center
+    center/cover;
+  width: 100%;
+  height: 100%;
+}
+
+.start {
+  width: 110px;
+  margin: 0 auto;
+  padding: 2px 13px;
+  font-weight: 900;
+  font-size: 18px;
+  border: 0.5px solid black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.start a {
+  color: black;
+  text-decoration: none;
+}
+
+.tool-box-container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.tools-images-container {
+  width: 18vmin;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-end;
+  margin-top: 130px;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  align-self: center;
+  margin: 5px auto;
+}
+
+.tool-image {
+  width: 10vmin;
+  height: 10vmin;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.tool-name {
+  display: flex;
+  font-size: 11px;
+  color: #fff;
+  margin: auto;
+}
+
+.axe {
+  background: url("/assets/images/axe.png") no-repeat center center / cover;
+  border: black 5px solid;
+}
+.shovel {
+  background: url("/assets/images/shovel.png") no-repeat center center/ cover;
+  border: black 5px solid;
+}
+.pickaxe {
+  background: url("/assets/images/pickaxe.png") no-repeat center center/ cover;
+  border: black 5px solid;
 }
