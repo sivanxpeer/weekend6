@@ -8,9 +8,7 @@
 
 body {
     height: 100vh;
-    /* background: url("/assets/images/wood.png") no-repeat center center/cover; */
     background: url("/assets/images/istockphoto-1312381221-170667a.jpg") no-repeat center center/cover;
-    /* opacity: 0.8; */
 }
 
 .page-container {
@@ -21,7 +19,6 @@ body {
     align-content: flex-start;
 }
 
-
 .minecraft-main {
   width: 90%;
   margin: auto;
@@ -29,7 +26,6 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-
 
 .minecraft {
   width: 80vmin;
@@ -84,6 +80,8 @@ body {
     border-radius: 2%;
     background-color: #B0A3A0;
 }
+
+
 /* -------------------------------------------------tool box section --------------------------------------------------------------*/
 
 .tool-box-container {

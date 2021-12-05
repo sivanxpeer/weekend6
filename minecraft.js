@@ -1,7 +1,6 @@
 const gameBoard = document.querySelector(".game-board");
 
 const gameBoardMatrix = [
-    //18*18
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -35,14 +34,11 @@ const materialObj = {
     cloud: { className: "cloud", id: 6 },
 };
 
-// const tools = document.querySelectorAll(".tool-image")
-
 const pickaxeButton = document.querySelector(".button1");
 const shovelButton = document.querySelector(".button2");
 const axeButton = document.querySelector(".button3");
 const inventory = document.querySelector(".inventory");
 
-//creating game-board
 gameBoardMatrix.forEach((row, yIndex) => {
     row.forEach((column, xIndex) => {
         const currentPositionId = gameBoardMatrix[yIndex][xIndex];
@@ -76,11 +72,6 @@ gameBoardMatrix.forEach((row, yIndex) => {
         gameBoard.appendChild(block);
     });
 });
-
-
-// a. Axe - for cutting trees
-// b. Pickaxe - for mining rocks
-// c. Shovel - for digging dirt
 
 const toolsObj = {
     pickaxe: { className: "rock" },
