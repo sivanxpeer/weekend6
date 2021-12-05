@@ -64,6 +64,25 @@ body {
   background-color: rgb(92, 194, 235);
 }
 
+/* -------------------------------------------------second theme --------------------------------------------------------------*/
+.grrenBrick {
+  background: url("/assets/images/greenBrick.jpeg");
+}
+.yellow-brick {
+  background: url("/assets/images/yellow-Brick.jpeg");
+}
+
+.themes {
+  display: flex;
+  align-self: center;
+  background-color: rgb(92, 194, 235);
+  align-content: center;
+  text-align: center;
+  /* height:; */
+  width: 200px;
+  display: none;
+}
+
 /* -------------------------------------------------tool box section --------------------------------------------------------------*/
 
 .tools-images-container {
@@ -135,6 +154,6 @@ button .inventory {
   border: 1px solid white;
   width: 100%;
   height: 100%;
-  padding:25px;
+  padding: 25px;
   border: rgb(201, 193, 193) 2px solid;
 }

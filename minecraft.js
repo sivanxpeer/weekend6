@@ -34,45 +34,63 @@ const materialObj = {
     cloud: { className: "cloud", id: 6 },
 };
 
+const materialObj2 = {
+    sky: { className: "sky", id: 0 },
+    tree: { className: "tree", id: 1 },
+    leaves: { className: "grrenBrick", id: 2 },
+    rock: { className: "yellow-Brick", id: 3 },
+}
+
+const themeButton = document.querySelector(".themes");
+themeButton.addEventListener("click",(e)=>{
+    console.log(e.target.value);
+    if(e.target.value===2){
+        fillTable(materialObj2);
+    }
+})
+
 const pickaxeButton = document.querySelector(".button1");
 const shovelButton = document.querySelector(".button2");
 const axeButton = document.querySelector(".button3");
 const inventory = document.querySelector(".inventory");
 
-gameBoardMatrix.forEach((row, yIndex) => {
-    row.forEach((column, xIndex) => {
-        const currentPositionId = gameBoardMatrix[yIndex][xIndex];
-        const block = document.createElement("div");
-        switch (currentPositionId) {
-            case 0:
-                block.classList.add(materialObj.sky.className);
-                break;
-            case 1:
-                block.classList.add(materialObj.tree.className);
-                break;
-            case 2:
-                block.classList.add(materialObj.leaves.className);
-                break;
-            case 3:
-                block.classList.add(materialObj.rock.className);
-                break;
-            case 4:
-                block.classList.add(materialObj.ground.className);
-                break;
-            case 5:
-                block.classList.add(materialObj.grass.className);
-                break;
-            case 6:
-                block.classList.add(materialObj.cloud.className);
-                break;
-            case 7:
-                block.classList.add(materialObj.grassBlock.className);
-                break;
-        }
-        gameBoard.appendChild(block);
+function fillTable(obj){
+    gameBoardMatrix.forEach((row, yIndex) => {
+        row.forEach((column, xIndex) => {
+            const currentPositionId = gameBoardMatrix[yIndex][xIndex];
+            const block = document.createElement("div");
+            switch (currentPositionId) {
+                case 0:
+                    block.classList.add(materialObj.sky.className);
+                    break;
+                case 1:
+                    block.classList.add(materialObj.tree.className);
+                    break;
+                case 2:
+                    block.classList.add(materialObj.leaves.className);
+                    break;
+                case 3:
+                    block.classList.add(materialObj.rock.className);
+                    break;
+                case 4:
+                    block.classList.add(materialObj.ground.className);
+                    break;
+                case 5:
+                    block.classList.add(materialObj.grass.className);
+                    break;
+                case 6:
+                    block.classList.add(materialObj.cloud.className);
+                    break;
+                case 7:
+                    block.classList.add(materialObj.grassBlock.className);
+                    break;
+            }
+            gameBoard.appendChild(block);
+        });
     });
-});
+}
 
+fillTable(materialObj);
 const toolsObj = {
     pickaxe: { className: "rock" },
     shovel: { className: ["ground", "grass", "leaves"] },
