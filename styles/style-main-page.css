@@ -7,30 +7,36 @@
 @import url("http://fonts.cdnfonts.com/css/minecraft-4");
 
 body {
-  height: 100vh;
-  background: url("/assets/images/wood.png") no-repeat center center/cover;
-  background-size: cover;
+    height: 100vh;
+    /* background: url("/assets/images/wood.png") no-repeat center center/cover; */
+    background: url("/assets/images/istockphoto-1312381221-170667a.jpg") no-repeat center center/cover;
+    /* opacity: 0.8; */
 }
 
 .page-container {
-  display: flex;
-  justify-content: space-between;
-  align-content: flex-start;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-content: flex-start;
 }
 
+
 .minecraft-main {
-  width: 100%;
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+
 .minecraft {
-  width: 20rem;
-  height: 10rem;
+  width: 80vmin;
+  height: 18rem;
   display: flex;
+  flex-direction: column;
   align-self: center;
-  justify-content: center;
   align-content: center;
   justify-self: center;
   align-self: center;
@@ -49,15 +55,17 @@ body {
 
 .start {
   width: 110px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 3px 13px;
   font-weight: 900;
   font-size: 18px;
+  background-color: #B0A3A0;
   border: 0.5px solid black;
   font-family: "Minecraft", sans-serif;
   display: flex;
   justify-content: center;
   align-content: center;
+
 }
 
 .start a {
@@ -65,12 +73,23 @@ body {
   text-decoration: none;
 }
 
+.how-to{
+    width: 75vmin;
+    font-family: "Minecraft", sans-serif;
+    opacity: 1.2;
+    align-self: center;
+    display: flex;
+    text-align:center;
+    padding: 2%;
+    border-radius: 2%;
+    background-color: #B0A3A0;
+}
 /* -------------------------------------------------tool box section --------------------------------------------------------------*/
 
 .tool-box-container {
   display: flex;
   position: relative;
-  height: 100vh;
+  /* height: 100%; */
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -80,7 +99,7 @@ body {
 
 .tools-images-container {
   width: 18vmin;
-  height: 83%;
+  height: 77.7vmin;
   list-style: none;
   display: flex;
   flex-direction: column;

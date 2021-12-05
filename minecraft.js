@@ -119,7 +119,7 @@ inventory.addEventListener("click", (e) => {
 })
 
 gameBoard.addEventListener("click", (e) => {
-    
+
     switch (currentTool) {
         case "pickaxe":
             if (toolsObj.pickaxe.className.includes(e.target.className)) {
