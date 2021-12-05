@@ -40,7 +40,7 @@ const materialObj = {
 const pickaxeButton = document.querySelector(".button1");
 const shovelButton = document.querySelector(".button2");
 const axeButton = document.querySelector(".button3");
-
+const inventory = document.querySelector(".inventory");
 
 //creating game-board
 gameBoardMatrix.forEach((row, yIndex) => {
@@ -93,58 +93,67 @@ pickaxeButton.addEventListener("click", () => {
     console.log("pickaxe clicked");
     currentTool = "pickaxe";
     console.dir(pickaxeButton);
-    pickaxeButton.style.background='blue';
-    axeButton.style.background="";
-    shovelButton.style.background="";
+    pickaxeButton.style.background = 'blue';
+    axeButton.style.background = "";
+    shovelButton.style.background = "";
 })
 
 shovelButton.addEventListener("click", () => {
     console.log("shovel clicked");
     currentTool = "shovel";
-    shovelButton.style.background='blue';
-    axeButton.style.background="";
-    pickaxeButton.style.background="";
+    shovelButton.style.background = 'blue';
+    axeButton.style.background = "";
+    pickaxeButton.style.background = "";
 })
 
 axeButton.addEventListener("click", () => {
     console.log("axe clicked");
     currentTool = "axe";
-    shovelButton.style.background='';
-    axeButton.style.background="blue";
-    pickaxeButton.style.background="";
+    shovelButton.style.background = '';
+    axeButton.style.background = "blue";
+    pickaxeButton.style.background = "";
+})
 
+inventory.addEventListener("click", (e) => {
+    currentTool = "inventory";
 })
 
 gameBoard.addEventListener("click", (e) => {
-    // console.log(toolsObj.pickaxe.className)
-    // console.log(e.target.className)
+    
     switch (currentTool) {
-        // console.dir(e.target.className);
-        // console.log(toolsObj.pickaxe.className);
         case "pickaxe":
             if (toolsObj.pickaxe.className.includes(e.target.className)) {
-                e.target.classList ="sky";
+                inventory.classList = e.target.className;
+                e.target.classList = "sky";
             }
-            else{
-                pickaxeButton.style.background='red';
+            else {
+                pickaxeButton.style.background = 'red';
             }
             break;
         case "shovel":
+
             if (toolsObj.shovel.className.includes(e.target.className)) {
-                e.target.classList="sky";
+                inventory.classList = e.target.className;
+                e.target.classList = "sky";
             }
-            else{
-                shovelButton.style.background='red';
+            else {
+                shovelButton.style.background = 'red';
             }
             break;
         case "axe":
             if (toolsObj.shovel.className.includes(e.target.className)) {
-                e.target.classList="sky";
+                inventory.classList = e.target.className;
+                e.target.classList = "sky";
             }
-            else{
-                axeButton.style.background='red';
-            }   
+            else {
+                axeButton.style.background = 'red';
+            }
             break;
+        case "inventory":
+            console.log(inventory.className);
+            console.log(e.target.className);
+            e.target.className = inventory.className;
+            inventory.className = "";
     }
 })
 

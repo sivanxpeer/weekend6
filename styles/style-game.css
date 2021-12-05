@@ -127,12 +127,23 @@ div{
 }
 
 .inventory{
-  width:5vmin;
-  height:5vmin;
   border: 1px solid white;;
+  width:10vmin;
+  height:10vmin;
+
+}
+button .inventory{
+  border: 1px solid white;;
+  width:10vmin;
+  height:10vmin;
+  /* padding:25px; */
+  /* margin-bottom:15px; */
+  border:red 2px solid;   
 }
 
 button{
+  width:12vmin;
+  height:12vmin;
   border: none;
   padding: 2%;
   background-color: black;
